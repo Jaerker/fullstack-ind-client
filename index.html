@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>A text-based RPG game</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <link rel='stylesheet' href='./css/intro.css'>
+    <title>THE GAUNTLET</title>
 </head>
 
 <body>
-    <h1>Greetings!</h1>
+    <h1 class='main-page-title' id="title">The Gauntlet</h1>
+
+    <!-- <main id='gameContainer' class='game-container'>
+        
+    </main> -->
+
+    <section id='introMessage' class='page-message page-message--inactive'>
+        <h1 class="message__header">Have you played before?</h1>
+        <img src='./img/icons/separator-h.PNG' class='header__underline'/>
+        <p class='message__body'>This game saves data in local storage, therefore you get this question if there is nothing avaliable.</p>
+        <section class="message__button-wrapper">
+            <button class='message__button' id='btnYes'>YES</button>
+            <button class='message__button' id='btnNo'>NO</button>
+        </section>
+        
+    </section>
+
+    <section id='descriptionMessage' class='page-message page-message--inactive'>
+        <h1 class="message__header">Instructions</h1>
+        <p class='message__body'>Pick one of the cards as your character. After you have chosen, you will have to defeat monsters one by one until your untimely demise.</p>
+        <section class="message__button-wrapper">
+            <button class='message__button' id='btnGotIt'>OK</button>
+        </section>
+        
+    </section>
+
+    <section id='gameInProgressMessage' class='page-message page-message--inactive'>
+        <h1 class="message__header">Game in progress</h1>
+        <img src='./img/icons/separator-h.PNG' class='header__underline'/>
+        <p class='message__body'>There seems to be a game in progress. Do you want to continue?</p>
+        <section class="message__button-wrapper">
+            <button class='message__button' id='btnContinue'>YES</button>
+            <button class='message__button' id='btnNew'>NO</button>
+        </section>
+        
+    </section>
+
 </body>
-
-
-<script src="./dist/script.js"></script>
+<script src='./js/anime.min.js'></script>
+<script type='module' src='./dist/script.js'></script>
 </html>

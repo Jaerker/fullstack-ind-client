@@ -1,0 +1,66 @@
+.page-message{
+    position:absolute;
+    width:455px;
+    height: 550px;
+    background-image: url('../img/page.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:2.5rem 2rem;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    opacity:0;
+    transform-origin:center left;
+    transform: rotateY('90deg');
+}
+
+.page-message--inactive{
+    pointer-events: none;
+}
+
+.message__header{
+    font-size:2.25rem;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.header__underline{
+    width:100%;
+    padding-top:1rem;
+    padding-bottom:3rem;
+}
+.message__body{
+    font-size:2rem;
+    padding-bottom: 4rem;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.message__button-wrapper{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+}
+.message__button{
+    border:none;
+    /* background-color: transparent; */
+    background-image: url('../img/a_02.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:5rem;
+    height:5rem;
+    border-radius:100%;
+    box-shadow: 0px 0px 10px white;
+    font-size: 2rem;
+    text-align:center;
+    cursor: pointer;
+
+    padding-inline:0;
+    padding-block:0;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

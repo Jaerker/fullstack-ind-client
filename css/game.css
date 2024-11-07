@@ -1,0 +1,211 @@
+
+.game-logo{
+    position:fixed;
+    z-index:10;
+    top:1.25rem;
+    left:.5rem;
+    width:7rem;
+    height:8rem;
+    background-image:url('../img/a_01.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:grid;
+    place-items:center;
+    font-size:4.5rem;
+    padding-bottom:.75rem;
+    text-shadow: 0px 0px 10px maroon, 5px 5px 10px black;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+}
+
+.game-container{
+    position:relative;
+    height:64vh;
+    width:80vh;
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-image: url('../img/game-border.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+}
+.game-container--active{
+    opacity:1;
+}
+.game-container--first-time{
+    top:100vh;
+}
+
+.character-cards-wrapper{
+    position:absolute;
+    z-index:2;
+    bottom:-40rem;
+    left:-2.5rem;
+    display:flex;
+    justify-content: center;
+    gap:1rem;
+}
+
+.character-card{
+    background:transparent;
+    position:relative;
+    width:16rem;
+    height: 21.5rem;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content: end;
+    border-radius:18px;
+    border:none;
+    align-items: center;
+    color:transparent;
+    perspective: 1000px; 
+}
+
+.character-card--inactive{
+    pointer-events: none;
+}
+
+.character-card__inner{
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    transform-style: preserve-3d;
+}
+
+.character-card__inner--selected{
+    box-shadow: 0 0 25px 5px white;
+}
+
+.character-card__front, .character-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.character-card__back {
+    border-radius:20px;
+    background: linear-gradient(to bottom right, #3f3f41 5%, #61790a 75%);
+    color: black;
+    transform: rotateY(180deg);
+}
+
+.card__image{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+.character__image{
+    height:15rem;
+    width:12rem;
+    object-fit: contain;
+    transform: rotateY(180deg);
+}
+
+.character__stats-table{
+    position:absolute;
+    top:10%;
+    right:1.5rem;
+    margin:auto;
+    font-size:2.5rem;
+    font-weight:500;
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.character-stats__row{
+    width:100%;
+    border-bottom:solid 1px black;
+}
+.character-stats__row:last-child{
+    border-bottom:solid 1px transparent;
+}
+
+.table-body{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.character-name{
+    position:absolute;
+    left:0;
+    right:0;
+    transform:translateY(-3.25rem);
+    font-size: 1.45rem;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    color:black;
+    text-shadow: 0px 0px 8px white;
+}
+
+.character-stats__key{
+    text-align:left;
+    width:100%;
+}
+
+.character-stats__value{
+    text-align:right;
+    width:100%;
+}
+
+.start-btn{
+    position:absolute;
+    display:grid;
+    place-items:center;
+    width:10rem;
+    height:10rem;   
+    border:none;
+    background:transparent;
+    border-radius:100%;
+    right:8rem;
+    bottom:4rem;
+}
+
+.start-btn--active{
+    box-shadow: 0 0 10px 2px white;
+    cursor:pointer;
+}
+
+.start-img{
+    position:absolute;
+}
+
+.start-img__circle{
+    width:10rem;
+    height:10rem;    
+}
+
+.start-img__sword{
+    width:5rem;
+    height:5rem;
+}
+
+.start-btn__text{
+    position:absolute;
+    bottom:-2rem;
+    font-size:1.75rem;
+    letter-spacing: .5rem;
+    opacity:0;
+}

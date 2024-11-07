@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='../css/game.css'>
+    <link rel='stylesheet' href='../css/style.css'>
+    <title>Choose your destiny</title>
+</head>
+
+<body>
+    
+    <section class='game-logo' id='gameLogo'>TG</section>
+    
+    <h1 class='main-page-title' id='title'>Choose your destiny</h1>
+    <main id='gameContainer' class='game-container'>
+
+        <section class='character-cards-wrapper'>
+            <button class='character-card' id='firstCard'>
+                <section class='character-card__inner' id='firstCardInner'>
+                    <section class='character-card__front'>
+                        <img class='card__image' src='../img/card-back.PNG' alt='backside of card'>                   
+                    </section>
+                    <section class='character-card__back'>
+                        <img class='character__image' src='../img/male/19.png'>
+                        <img class='card__image' src='../img/card-front.PNG'>
+                        <h2 class='character-name'>Victor Vexation</h2>
+                    </section>
+                </section>
+            </button>
+
+            <button class='character-card' id='secondCard'>
+                <section class='character-card__inner' id='secondCardInner'>
+                    <section class='character-card__front'>
+                        <img class='card__image' src='../img/card-back.PNG' alt='backside of card'>                   
+                    </section>
+                    <section class='character-card__back'>
+                        <img class='character__image' src='../img/male/19.png'>
+                        <img class='card__image' src='../img/card-front.PNG'>
+                        <h2 class='character-name'>Victor Vexation</h2>
+                    </section>
+                </section>
+            </button>
+
+            <button class='character-card' id='thirdCard'>
+                <section class='character-card__inner' id='thirdCardInner'>
+                    <section class='character-card__front'>
+                        <img class='card__image' src='../img/card-back.PNG' alt='backside of card'>                   
+                    </section>
+                    <section class='character-card__back'>
+                        <img class='character__image' src='../img/male/19.png'>
+                        <img class='card__image' src='../img/card-front.PNG'>
+                        <h2 class='character-name'>Victor Vexation</h2>
+                    </section>
+                </section>
+            </button>
+        </section>
+
+
+        <table class='character__stats-table' id='#currentPlayerStats'>
+            <tbody class='table-body'>
+                <tr class='character-stats__row'>
+                    <td class='character-stats__key'>Health</td>
+                    <td class='character-stats__value' id='hp'></td>
+                </tr><tr class='character-stats__row'>
+                    <td class='character-stats__key'>Strength</td>
+                    <td class='character-stats__value' id='str'></td>
+                </tr>
+                <tr class='character-stats__row'>
+                    <td class='character-stats__key'>Defense</td>
+                    <td class='character-stats__value' id='def'></td>
+                </tr>
+                <tr class='character-stats__row'>
+                    <td class='character-stats__key'>Speed</td>
+                    <td class='character-stats__value' id='spd'></td>
+                </tr>
+            </tbody>
+           
+        </table>
+        
+        <button id='start' class='start-btn'>
+            <img class='start-img start-img__circle' id='startCircle' src='../img/icons/circle.png' alt='A circle'>
+            <img class='start-img start-img__sword' id='startSword' src='../img/icons/sword.png' alt='A sword within a circle'>
+            <p class='start-btn__text' id='startText'>START</p>
+        </button>
+
+    </main>
+
+    
+
+    
+
+
+</body>
+<script src='../js/anime.min.js'></script>
+<script type='module' src='../dist/game.js'></script>
+</html>
+

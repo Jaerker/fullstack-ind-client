@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='../css/style.css'>
+        <link rel='stylesheet' href='../css/battle.css'>
+        <title>THE GAUNTLET</title>
+    </head>
+<body>
+    <main id='gameContainer' class='game-container'>
+        <section class='game-corner game-corner--player'>
+                <button class='character-card' id='playerCard'>
+                    <section class='character-card__inner' id='playerCardInner'>
+                        <section class='character-card__back'>
+                            <img class='character__image' id='playerImg' src='../img/icons/question.png'>
+                            <img class='card__image' src='../img/card-front.PNG'>
+                            <h2 class='character-name' id='playerName'></h2>
+                        </section>
+                    </section>
+                </button>
+                <table class='character__stats-table' id='currentPlayerStats'>
+                    <tbody class='table-body'>
+                        <tr class='character-stats__row'>
+                            <td class='character-stats__key'>Health</td>
+                            <td class='character-stats__value' id='hp'></td>
+                        </tr><tr class='character-stats__row'>
+                            <td class='character-stats__key'>Strength</td>
+                            <td class='character-stats__value' id='str'></td>
+                        </tr>
+                        <tr class='character-stats__row'>
+                            <td class='character-stats__key'>Defense</td>
+                            <td class='character-stats__value' id='def'></td>
+                        </tr>
+                        <tr class='character-stats__row'>
+                            <td class='character-stats__key'>Speed</td>
+                            <td class='character-stats__value' id='spd'></td>
+                        </tr>
+                    </tbody>
+                   
+                </table>
+                <section class='player-action-buttons'>
+                    
+                    <button id='defendBtn' class='btn defend-btn'>
+                        <img class='btn-img__circle' id='defendCircle' src='../img/icons/circle.png' alt='A circle'>
+                        <img class='btn-img__shield' id='defendShield' src='../img/icons/shield.png' alt='A sword within a circle'>
+                    </button>
+                    <button id='attackBtn' class='btn attack-btn'>
+                        <img class='btn-img__circle' id='attackCircle' src='../img/icons/circle.png' alt='A circle'>
+                        <img class='btn-img__sword' id='attackSword' src='../img/icons/sword.png' alt='A sword within a circle'>
+                    </button>
+                </section>
+        </section>
+
+        <section class='separator'>
+            <img src='../img/separator.PNG' alt='separator' class='separator__img'>
+            <img src='../img/separator.PNG' alt='separator' class='separator__img'>
+        </section>
+
+        <section class='game-corner game-corner--enemy'>
+            <button class='character-card' id='enemyCard'>
+                <section class='character-card__inner' id='enemyCardInner'>
+                    <section class='character-card__back'>
+                        <img class='character__image' id='enemyImg' src='../img/icons/question.png'>
+                        <img class='card__image' src='../img/card-front.PNG'>
+                        <h2 class='character-name' id='enemyName'></h2>
+                        <section class='enemy-health-wrapper'>
+                            <section class='enemy-health-bar' id='enemyHealthBar'></section>
+                            <p id='enemyHealth'>100/100</p>
+                        </section>
+                    </section>
+                </section>
+            </button>
+
+            <h2 class='combat-log__title'>Combat log</h2>
+            <section class='combat-log__container' id='combatLog'>
+                
+            </section>
+        </section>
+    </main>
+
+    <section class="results-container results-container--inactive" id='resultsContainer'>
+        <img id='pageBg' class='results-bg results-bg--inactive' src="../img/page.png" alt="background of a page" >
+        <section class="results results--inactive" id='won'> 
+            <h2 class="result__title">YOU WON</h2>
+            <p class='result__content'> you got:</p>
+            <ul class='loot-list' id='lootList'>
+
+            </ul>
+            <button class='choice-btn' id='btnGoFurther'>GO FURTHER</button>
+            <button class='choice-btn' id='btnRestart'>RESTART</button>
+
+        </section>
+        <section class="results results--inactive" id='lost'>
+        <h2 class="result__title">YOU LOST</h2>
+            <button class='choice-btn' id='btnTryAgain'>Try again?</button>
+        </section>
+
+    </section>
+
+</body>
+<script src='../js/anime.min.js'></script>
+<script type='module' src='../dist/battle.js'></script>
+
+</html>
