@@ -23,8 +23,8 @@
 
 .game-container{
     position:relative;
-    height:64vh;
-    width:80vh;
+    width:730px;
+    height:580px;
     border-radius:10px;
     display:flex;
     flex-direction: column;

@@ -46,10 +46,10 @@ const SetupEnvironment = async (): Promise<void> => {
 
     startBtnRef.addEventListener('click', () => {
         if(startBtnRef.classList.contains('start-btn--active')){
+            startBtnRef.classList.remove('start-btn--active');
             localStorage.setItem('character',JSON.stringify(chosenCharacter));
             localStorage.setItem('game-state','ongoing');
             localStorage.removeItem('char-list-data');
-            startBtnRef.classList.remove('start-btn--active');
 
             animations.characterPage.gameContainer.close();
             setTimeout(() => {
